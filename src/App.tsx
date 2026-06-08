@@ -3,6 +3,7 @@ import  Grid  from '@mui/material/Grid';
 import HeaderUI from './components/HeaderUI.tsx';
 import AlertUI from './components/AlertUI.tsx';
 import SelectorUI from './components/SelectorUI.tsx';
+import IndicatorUI from './components/IndicatorUI .tsx';
 
 function App() {  
   return (
@@ -21,7 +22,25 @@ function App() {
          <Grid size={{ xs: 12, md: 3 }}><SelectorUI/></Grid>
 
          {/* Indicadores */}
-         <Grid size={{ xs: 12, md: 9 }}>Elemento: Indicadores</Grid>
+         <Grid container size={{ xs: 12, md: 9 }} >
+
+                 <Grid size={{ xs: 12, md: 3 }}>
+                     <IndicatorUI title='Temperatura (2m)' description='XX°C' />
+                 </Grid>
+
+                 <Grid size={{ xs: 12, md: 3 }}>
+                     <IndicatorUI title='Temperatura Aparente' description='XX°C' />
+                 </Grid>
+
+                 <Grid size={{ xs: 12, md: 3 }}>
+                     <IndicatorUI title='Velocidad del Viento' description='XX km/h' />
+                 </Grid>
+
+                 <Grid size={{ xs: 12, md: 3 }}>
+                     <IndicatorUI title='Humedad Relativa' description='XX%' />
+                 </Grid>
+
+             </Grid>
 
          {/* Gráfico */}
          <Grid size={{ xs: 12, md: 6 }}sx={{ display: { xs: "none", md: "block"} }} >
