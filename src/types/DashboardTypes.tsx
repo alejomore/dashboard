@@ -1,4 +1,4 @@
-export interface OpenMeteoResponse {
+export interface Root {
   latitude: number
   longitude: number
   generationtime_ms: number
@@ -6,8 +6,22 @@ export interface OpenMeteoResponse {
   timezone: string
   timezone_abbreviation: string
   elevation: number
+  current_units: CurrentUnits
+  current: Current
   hourly_units: HourlyUnits
   hourly: Hourly
+}
+
+export interface CurrentUnits {
+  time: string
+  interval: string
+  temperature_2m: string
+}
+
+export interface Current {
+  time: string
+  interval: number
+  temperature_2m: number
 }
 
 export interface HourlyUnits {
